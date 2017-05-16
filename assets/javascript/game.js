@@ -4,14 +4,19 @@ var choices =
 "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 
-
 //Recognize user input
  document.onkeyup = function() {
+
 //Capture user input and set to lower case
  	var userGuess = String.fromCharCode(event.keyCode).
  		toLowerCase();
 
  	 console.log(userGuess);	
- }
+ 
+//Create random index of computer choices:
+var computerGuess = choices[Math.floor(Math.random()
+	* choices.length)];
 
+	console.log(computerGuess);
 
+}
