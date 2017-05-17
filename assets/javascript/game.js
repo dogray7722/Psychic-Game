@@ -3,6 +3,9 @@ var choices =
 ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", 
 "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+//Create variables for wins, losses, and letters selected
+var wins = 0;
+var losses = 0;
 
 //Recognize user input
  document.onkeyup = function() {
@@ -18,5 +21,13 @@ var computerGuess = choices[Math.floor(Math.random()
 	* choices.length)];
 
 	console.log(computerGuess);
+
+	if (userGuess === computerGuess) {
+		wins++;
+	}  else {
+
+	losses++;
+	
+	}
 
 }
