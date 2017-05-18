@@ -22,12 +22,19 @@ var computerGuess = choices[Math.floor(Math.random()
 
 	console.log(computerGuess);
 
-	if (userGuess === computerGuess) {
+	if (userGuess == computerGuess) {
 		wins++;
 	}  else {
 
 	losses++;
 	
 	}
+
+	var html = "<p>Press any alphabet key to start playing. </p>" +
+	"<p>Wins: " + wins + "</p>" +
+	"<p>Losses: " + losses + "</p>" +
+	"<p>Letters chosen: " + userGuess + "</p>";
+
+	document.querySelector('#game').innerHTML = html;
 
 }
